@@ -7,9 +7,10 @@ Working with RootCore.
 -- Contact: minoru.hirose@cern.ch, daiki.hayakawa@cern.ch  
 
 ##How to setup...  
-git clone git://github.com/hrsmnr/MMTool.git [destination]  
-Add "MMTool" in the your packeage dependency list (at PACKAGE_DEP in [YourPackage]/cmt/Makefile.RootCore)  
-rc find_package
+$git clone git://github.com/hrsmnr/MMTool.git [destination]  
+-Add "MMTool" in the your packeage dependency list.  
+ (i.e. Modify PACKAGE_DEP in [YourPackage]/cmt/Makefile.RootCore.)  
+$rc find_package  
 
 ##Code snipets for usage...  
 -- Include the header file.  
@@ -19,7 +20,7 @@ rc find_package
 
 -- Instantiate MMTool and set proper efficiency before the event loop. 
 ``` cpp
-MM::MMTool m_MMTool = new MM::MMTool(MM::TwoLepMM,m_dbg);  
+MM::MMTool m_MMTool = new MM::MMTool(MM::TwoLepMM);  
 m_MMTool->prepEffHists("Path to the file for real/fake efficiency");
 ``` 
 (In this case, MMTool returns the event weight for 2L Matrix Method (4x4 matrix).)  
