@@ -25,7 +25,7 @@ namespace MM {
     MMTool(NLepMM mmMode, const MSG::Level& debugMode=MSG::ERROR);
     ~MMTool();
 
-    Bool_t prepEffHists(TString fileName);
+    Bool_t prepEffHists(TString fileName, Int_t effDimension=0);
 
     Double_t getMMWeight();
 
